@@ -28,7 +28,7 @@ namespace mod::owr
         uint8_t touConditions;      // 0x1A
         uint8_t collectedStars;     // 0x1B
         uint8_t cutsceneSkip;       // 0x1C
-        uint8_t expMultiplier;      // 0x1D
+        uint8_t padding_1;          // 0x1D
         uint8_t startingLevel;      // 0x1E
         uint8_t deathLinkTriggered; // 0x1F
         uint8_t deathLinkSent;      // 0x20
@@ -36,9 +36,10 @@ namespace mod::owr
         uint8_t blockVisibility;    // 0x22
         uint8_t firstAttack;        // 0x23
         uint32_t musicSeed;         // 0x24
+        uint16_t expMultiplier;     // 0x28
     };
 
-    static_assert(sizeof(APSettings) == 0x28);
+    static_assert(sizeof(APSettings) == 0x30);
 
     class StateManager
     {

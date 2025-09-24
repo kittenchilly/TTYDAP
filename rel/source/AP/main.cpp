@@ -308,7 +308,7 @@ void monosiriItemCheck(int unit_id)
 
 int applyExpMultiplier(int exp)
 {
-    return exp * gState->apSettings->expMultiplier;
+    return exp * (gState->apSettings->expMultiplier / 100);
 }
 
 int getBlockVisibility(int blockType)
